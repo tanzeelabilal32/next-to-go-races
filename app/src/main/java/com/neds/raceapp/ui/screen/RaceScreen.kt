@@ -14,6 +14,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -23,6 +24,7 @@ import com.neds.raceapp.data.model.Race
 import com.neds.raceapp.presentation.viewmodel.RaceViewModel
 import com.neds.raceapp.ui.components.CategoryFilters
 import com.neds.raceapp.ui.components.RaceCountdown
+import kotlinx.coroutines.delay
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -31,6 +33,10 @@ fun RaceScreen() {
     val races by viewModel.races.collectAsState()
     val loading by viewModel.loading.collectAsState()
     val selectedCategories by viewModel.selectedCategories.collectAsState()
+    LaunchedEffect(Unit) {
+        viewModel.fetchRacesPeriodically()
+    }
+
     Scaffold(
         topBar = {
             TopAppBar(

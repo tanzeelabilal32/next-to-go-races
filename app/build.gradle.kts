@@ -14,7 +14,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.neds.raceapp.MyTestRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -83,12 +83,15 @@ dependencies {
     // Unit Testing
     testImplementation ("junit:junit:4.13.2")
     testImplementation ("io.mockk:mockk:1.12.0")
+    testImplementation ("org.mockito:mockito-inline:2.13.0")
     testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.2")
     testImplementation ("app.cash.turbine:turbine:1.0.0")
+    debugImplementation ("androidx.test:core:1.3.0")
 
     // UI Testing
     androidTestImplementation ("androidx.compose.ui:ui-test-junit4:1.5.3")
     debugImplementation ("androidx.compose.ui:ui-tooling:1.5.3")
+    testImplementation("org.robolectric:robolectric:4.10")
 
     // Espresso (Android UI Testing)
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")

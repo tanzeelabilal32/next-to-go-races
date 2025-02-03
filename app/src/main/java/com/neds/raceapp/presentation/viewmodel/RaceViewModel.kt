@@ -20,11 +20,8 @@ class RaceViewModel(private val getNextRacesUseCase: GetNextRacesUseCase) : View
     private val _selectedCategories = MutableStateFlow<List<String>>(emptyList())
     val selectedCategories: StateFlow<List<String>> get() = _selectedCategories
 
-    init {
-        fetchRacesPeriodically()
-    }
 
-    private fun fetchRacesPeriodically() {
+    fun fetchRacesPeriodically() {
         viewModelScope.launch {
             while (true) {
                 fetchRaces()
