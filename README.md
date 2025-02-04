@@ -95,4 +95,11 @@ Run UI tests using:
 
 ---
 
+### **🏃 Next Steps
+Following steps can be taken 
+- Use Shared Preferences to store the response and run operations on this for better performance
+- Pagination can be introduced to see more races
+- UI can be enhanced as per neds design
+
+
 
