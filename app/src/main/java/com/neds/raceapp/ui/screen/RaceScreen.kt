@@ -82,7 +82,7 @@ fun RaceItem(race: Race, viewModel: RaceViewModel) {
             .padding(8.dp), elevation = 4.dp
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
-            Text("${race.meetingName}", style = MaterialTheme.typography.headlineSmall)
+            Text("${race.meetingName}", style = MaterialTheme.typography.titleMedium)
             Text("Race No: ${race.raceNumber}")
             RaceCountdown(race.advertisedStart.seconds, race.raceId, viewModel)
         }
