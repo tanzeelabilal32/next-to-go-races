@@ -8,6 +8,6 @@ interface RaceApiService {
     @GET("racing/")
     suspend fun getNextRaces(
         @Query("method") method: String = "nextraces",
-        @Query("count") count: Int = 10
+        @Query("count") count: Int = 5
     ): RaceResponse
 }
