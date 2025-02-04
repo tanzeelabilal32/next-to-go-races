@@ -62,6 +62,7 @@ Race categories are defined as:
 ```bash
 git clone https://github.com/your-username/racing-app.git
 ```
+and switch to branch entain_ned
 
 2️⃣ **Open in Android Studio**
 - Open **Android Studio** (latest stable version)
